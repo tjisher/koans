@@ -1,0 +1,14 @@
+about_asserts
+assert_equal > assert
+
+about_nil
+nil is a Object
+
+about_objects
+!= will not match clones
+
+about_arrays
+array[-1,1], [0..2], remember -1 is last element not one in from end
+Range (1..3) == (1...4) ie witht 3 dots end value is excluded
+pop from end
+shift remove first, expensive of course, unshift adds to front
