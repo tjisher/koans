@@ -41,3 +41,12 @@ remember += returns new object
 '\n' single quote no specical charaters, usually. + no evaluation ie no '#{string}'
 ?a single character, use because reasons, used to return int representation
 string.split defaults to splitting on space
+
+about_symbols
+:symbol == (a = :symbol) ie even when object assigned
+Symbol.all_symbols.map { |x| x.to_s } good old map/array/hash to string
+lam = lambda  { |a, b| a + b } \n lam.call(1,2)
+variable with capital first letter become Constants, which are also symbols
+:string == "string".to_sym, can also include spaces because reasons, also :"a #{b} c"
+:string.to_s == "string"
+.respond_to?(:each_char) check for method
