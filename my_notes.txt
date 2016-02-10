@@ -12,3 +12,9 @@ array[-1,1], [0..2], remember -1 is last element not one in from end
 Range (1..3) == (1...4) ie witht 3 dots end value is excluded
 pop from end
 shift remove first, expensive of course, unshift adds to front
+
+about_array_assignment
+first_name, last_name = ["John", "Smith", "Ignored"]
+* (or splat) makes [] into argument list for methods
+** can be used on Hashes to pass key and value
+first_name, = ["John", "Smith"] is valid but I'd still call it insane
