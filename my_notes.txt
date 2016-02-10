@@ -1,3 +1,6 @@
+http://rubykoans.com
+https://github.com/bbatsov/ruby-style-guide/blob/master/README.md
+
 about_asserts
 assert_equal > assert
 
@@ -25,3 +28,16 @@ hash.fetch(:key) instead of hash[:key] if want exception rather than nil
 #todo# style guide says use key: but doesnt comapre  {"f" => 1} != {"f": 1}
 Hash.new("value ie for not populated or found keys, 1 single object across all keys")
 #todo# review test_default_value_with_block passing hash as default value makes them seperate objects
+
+about_strings
+"string" 'string' "\"string\"" %(string) %{string} %!string!
+%() etc are multine, auto include \n's, .lines accesible inc .lines.count, length/size includes \n's etc 
+<<EOS 
+string
+EOS  entry starts/line count starts on 2nd line
+multi line string concatination "\" can be used with quoted strings
+string += second_half is acceptable but "#{user.name} <#{user.email}>" or format('%s <%s>', user.name, user.email) prefered
+remember += returns new object
+'\n' single quote no specical charaters, usually. + no evaluation ie no '#{string}'
+?a single character, use because reasons, used to return int representation
+string.split defaults to splitting on space
