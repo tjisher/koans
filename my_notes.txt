@@ -50,3 +50,11 @@ variable with capital first letter become Constants, which are also symbols
 :string == "string".to_sym, can also include spaces because reasons, also :"a #{b} c"
 :string.to_s == "string"
 .respond_to?(:each_char) check for method
+
+about_regex
+/pattern/
+return first matched content or nil
+after patten can number which group to return ie "Gary" == "Gray, James"[/(\w+), (\w+)/, 1]
+$1 $2 etc will remain matched groups until next pattern is performed, ie can use next line
+.scan( /pattern/) return array ie find_all
+.sub /pattern/ = find_replace, gsub is global version find_replace_all
