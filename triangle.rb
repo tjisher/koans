@@ -14,7 +14,9 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-	#no validation
+	raise TriangleError, "Not a Triangle, sides must be positive length" if a < 1 || b < 1 || c < 1
+	raise TriangleError, "Not a Triangle, any two sides must add up to more than the third" if (a + b) <= c || ( b + c) <= a || (a + c) <= b
+
 	if a == b
 		return :equilateral if b == c
 		return :isosceles
@@ -23,6 +25,14 @@ def triangle(a, b, c)
 	end
 	:scalene 
   # WRITE THIS CODE
+end
+
+def triangle_sorted(a, b, c)
+	shortest, mid, longest = [a,b,c].sort #any/all can still equal
+	raise TriangleError, "Not a Triangle, sides must be positive length" if shortest < 1
+	raise TriangleError, "Not a Triangle, any two sides must add up to more than the third" if (shortest + mid) <= longest
+
+	[:equilateral,:isosceles,:scalene][ ([shortest, mid, longest].uniq.size - 1)]
 end
 
 # Error class used in part 2.  No need to change this code.

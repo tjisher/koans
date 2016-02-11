@@ -103,3 +103,9 @@ about_exceptions
     ensure
       #always
     end
+
+
+about_triangle_project (2)
+"Any two sides of a triangle should add up to more than the third side."
+line length too long but kept relevant, performance over array still over 75%
+still no data type check
