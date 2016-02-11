@@ -91,3 +91,6 @@ for x in array; x.to_s; end
 
 about_true_and_false
 as usual everything true apart from false, and nil though
+
+about_triangle_project (1)
+plenty to discuss, alt path is to array/sort though much more expensive (91.1% faster)
