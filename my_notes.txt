@@ -109,3 +109,16 @@ about_triangle_project (2)
 "Any two sides of a triangle should add up to more than the third side."
 line length too long but kept relevant, performance over array still over 75%
 still no data type check
+
+about_iteration
+    array.each do |item|
+      sum += item
+    end
+    var = array.each { |item| sum += item }
+    varArray = array.collect { |item| item + 1 } ==  array.map { |item| item + 1 }
+    array.select/find_all { |item| (item % 2) == 0 }, for nested if
+.find returns first
+	[2, 3, 4].inject(0) { |sum, item| sum + item }
+inject, throws the param into the first(sum) element or first element of collection if no param (2)
+	can use it continue counting ie make non zero based, convert array of arrays to hash or vice versa
+	[[:first_name, 'Shane'], [:last_name, 'Harvie']].inject({}) do |result, element|
