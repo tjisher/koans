@@ -72,3 +72,7 @@ self. cannot call private methods because reasons
 assert_raise(NoMethodError) do
   klass.private_method
 end
+
+about_keyword_arguments
+def method_with_keyword_arguments(one: 1, two: 'two') w/ defaults
+def method_with_keyword_arguments(one, two: 'two') no default
