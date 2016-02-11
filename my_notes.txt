@@ -122,3 +122,10 @@ about_iteration
 inject, throws the param into the first(sum) element or first element of collection if no param (2)
 	can use it continue counting ie make non zero based, convert array of arrays to hash or vice versa
 	[[:first_name, 'Shane'], [:last_name, 'Harvie']].inject({}) do |result, element|
+
+about_blocks
+yields are a thing and apparently popular, yuck, implicit unreferenced invoktion
+	allows the passed block freedom and the consumer to not care about specifics
+	varibales given still apply in orignal scope, ie byRef not Val
+	add_one = lambda { |n| n + 1 }, add_one.call(10) == add_one[10]
+	def method(&i_want_a_block); end, method(&heres_a_block)
