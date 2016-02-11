@@ -1,6 +1,8 @@
 http://rubykoans.com
 https://github.com/bbatsov/ruby-style-guide/blob/master/README.md
 
+1_000_000 = 1000000
+
 about_asserts
 assert_equal > assert
 
@@ -58,3 +60,15 @@ after patten can number which group to return ie "Gary" == "Gray, James"[/(\w+),
 $1 $2 etc will remain matched groups until next pattern is performed, ie can use next line
 .scan( /pattern/) return array ie find_all
 .sub /pattern/ = find_replace, gsub is global version find_replace_all
+
+about_methods
+def method_with_defaults(a, b=:default_value)
+def stub; end
+self. == c#this.
+private :my_private_method, same with protected, after method defined or list below declaration as:
+private
+def my_private_method
+self. cannot call private methods because reasons
+assert_raise(NoMethodError) do
+  klass.private_method
+end
