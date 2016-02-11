@@ -76,3 +76,9 @@ end
 about_keyword_arguments
 def method_with_keyword_arguments(one: 1, two: 'two') w/ defaults
 def method_with_keyword_arguments(one, two: 'two') no default
+
+about_constants
+::GlobalObj
+Scope::LocalObj
+Constants are inherited into nested classes
+nested constants take president over inherited ones, unless of course namespace seperately
