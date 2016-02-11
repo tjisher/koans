@@ -82,3 +82,9 @@ about_constants
 Scope::LocalObj
 Constants are inherited into nested classes
 nested constants take president over inherited ones, unless of course namespace seperately
+
+about_control_statmenets
+ie bad loop examples
+for x in array; x.to_s; end
+.upcase, .capitalize, .downcase
+10.times do; x += y; end;
