@@ -134,3 +134,8 @@ about_sandwhich_code
 prep, executre, close || bread, meat, bread
 means to abstract out repeated and consistent intro/outros
 ensure applies to classes and modules as well as usual try blocks
+
+about_scoring_project
+val.between?(1,5)
+score_long is 10% faster than score (ie lots of counting in small array is inexpensive)
+#todo# review ||= in style guides, single line value/count should be legible

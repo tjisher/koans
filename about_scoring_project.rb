@@ -29,7 +29,61 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 #
 # Your goal is to write the score method.
 
+def score_long(dice)
+  return 0 unless dice && dice.kind_of?(Array) && dice.count.between?(1,5)
+
+  result = 0
+
+  roll_values = Hash.new
+  dice.each do |roll|
+    if roll_values[ roll].nil?
+      roll_values[ roll] = 1
+    else
+     roll_values[ roll] += 1
+    end
+  end
+
+
+  roll_values.each do |roll, count|
+    if roll == 1
+      #1
+        if count >= 3
+          result += 1000 
+          count -= 3
+        end
+        result += (100 * count)
+    else 
+      #non-1
+      if count >= 3
+        result += (100 * roll)
+        count -= 3
+      end
+
+      #cope with remaning 5's
+      result += count * 50 if roll == 5
+    end
+
+  end
+
+  result
+  # You need to write this method
+end
+
 def score(dice)
+  return 0 unless dice && dice.kind_of?(Array) && dice.count.between?(1,5)
+  result = 0
+
+  #if 1's && 3*, 1000
+  #3*, *100
+  #remaing 1's *100
+  #remaing 5's *50
+
+  result += 1000 if dice.count(1) >= 3
+  (2..6).each do |roll|
+    result += roll * 100 if dice.count(roll) >= 3
+  end
+  result += (dice.count(1) % 3) * 100 
+  result += (dice.count(5) % 3) * 50 
   # You need to write this method
 end
 
