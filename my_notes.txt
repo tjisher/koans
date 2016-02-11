@@ -139,3 +139,11 @@ about_scoring_project
 val.between?(1,5)
 score_long is 10% faster than score (ie lots of counting in small array is inexpensive)
 #todo# review ||= in style guides, single line value/count should be legible
+
+about_classes
+@local_var, can be defined implicitly in a method
+klass.instance_variable_get("@inaccesible_var"), with no thrown exception, doesnt mean you should
+attr_reader :name
+attr_accessor :name
+.to_s auto called, unsiprisngly, along with .inspect should be implemented
+"\"STRING\"" == "STRING".inspect, becuase reasons
