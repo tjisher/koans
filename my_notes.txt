@@ -28,9 +28,7 @@ first_name, = ["John", "Smith"] is valid but I'd still call it insane
 about_hashes
 {key: "value"} prefered over {:key => "value"} but not mix
 hash.fetch(:key) instead of hash[:key] if want exception rather than nil
-#todo# style guide says use key: but doesnt comapre  {"f" => 1} != {"f": 1}
 Hash.new("value ie for not populated or found keys, 1 single object across all keys")
-#todo# review test_default_value_with_block passing hash as default value makes them seperate objects
 
 about_strings
 "string" 'string' "\"string\"" %(string) %{string} %!string!
@@ -139,7 +137,7 @@ ensure applies to classes and modules as well as usual try blocks
 about_scoring_project
 val.between?(1,5)
 score_long is 10% faster than score (ie lots of counting in small array is inexpensive)
-#todo# review ||= in style guides, single line value/count should be legible
+||= in style guides but not prefered, single line value/count should be legible
 
 about_classes
 @local_var, can be defined implicitly in a method
