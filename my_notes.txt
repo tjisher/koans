@@ -160,3 +160,8 @@ which is dumb
 
 about_modules
 non-instatnceable method/constant stores, principly for inheritance, can reference @val's it of course doesnt have (yet)
+namespacing
+
+about_scope
+::GlobalThing
+Namespace::OtherThing
