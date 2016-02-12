@@ -147,3 +147,6 @@ attr_reader :name
 attr_accessor :name
 .to_s auto called, unsiprisngly, along with .inspect should be implemented
 "\"STRING\"" == "STRING".inspect, becuase reasons
+
+about_open_classes
+defining a class a second time does not replace but instead extends
