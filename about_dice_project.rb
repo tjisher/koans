@@ -6,6 +6,24 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 #   code ...
 # end
 
+class DiceSet
+  #f roll int, .size(5).(1..6)
+  #a values []
+  attr_accessor :values
+
+  def initialize
+    @values = []
+  end
+
+  def roll (number_of_dice)
+    @values = []
+    return @values if number_of_dice < 1
+    number_of_dice = 5 if number_of_dice > 5
+
+    number_of_dice.times { @values << Random.rand(1..5) }
+  end
+end
+
 class AboutDiceProject < Neo::Koan
   def test_can_create_a_dice_set
     dice = DiceSet.new
@@ -32,16 +50,26 @@ class AboutDiceProject < Neo::Koan
   end
 
   def test_dice_values_should_change_between_rolls
+    #Testing pRNG here is a fools errand, test to make sure RNG is being called at all
     dice = DiceSet.new
+    dice2 = DiceSet.new
 
     dice.roll(5)
     first_time = dice.values
-
-    dice.roll(5)
+    dice2.roll(5)
     second_time = dice.values
 
     assert_not_equal first_time, second_time,
-      "Two rolls should not be equal"
+      "First rolls of new Dice should not be equal"
+
+
+    dice.roll(5)
+    first_time = dice.values
+    dice.roll(5)
+    second_time = dice.values
+
+    assert_not_equal [first_time, first_time.object_id], [second_time, second_time.object_id],
+      "Two consecutive rolls should not be equal"
 
     # THINK ABOUT IT:
     #
