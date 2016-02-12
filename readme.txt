@@ -1,6 +1,5 @@
 http://rubykoans.com
 https://github.com/bbatsov/ruby-style-guide/blob/master/README.md
-Koans Readme ./koans_README.rdoc, includes Creative Commons, Attribution-NonCommercial-ShareAlike, Version 3.0 
 
 1_000_000 = 1000000
 
