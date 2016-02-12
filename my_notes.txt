@@ -183,3 +183,7 @@ about_proxy_object_project
 pro-tip dont spell methods the wrong name
 remember attr_reader :object use labels not 'object'
 [].include? x, [].count x
+
+about_to_str
+implement to_str for aid but where cannot be practically treated as a string
+to_s remains the standard so long as output is equivilant to the object
