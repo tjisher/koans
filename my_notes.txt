@@ -170,3 +170,11 @@ about_class_methods
 can assign methods to classes without def class; end, just dot notation instance.new_method; end, only affects given instance
 def class.new_method; end, non-instances methods singleton
 class are same as methods w/ implicit return of last statement, becuase reasons
+
+about_message_passing
+class.send( :method_name, :first_arg, :second_arg), bool class.respond_to(:method_name)
+always remeber lcase is not opposite to upcase, its downcase becuase reasons
+[].join(", ")
+class.method_missing can be defined ie def method_missing(method_name, *args, &block);
+string[1,3] == range
+if overridng missing_method should also override respond_to? appropiately
