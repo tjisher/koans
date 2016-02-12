@@ -165,3 +165,8 @@ namespacing
 about_scope
 ::GlobalThing
 Namespace::OtherThing
+
+about_class_methods
+can assign methods to classes without def class; end, just dot notation instance.new_method; end, only affects given instance
+def class.new_method; end, non-instances methods singleton
+class are same as methods w/ implicit return of last statement, becuase reasons
