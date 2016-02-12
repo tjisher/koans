@@ -157,3 +157,6 @@ about_inheritence
 .super refers to parent method not class ie cant use to call a different method
 method(:foo).super_method.call is possible however
 which is dumb
+
+about_modules
+non-instatnceable method/constant stores, principly for inheritance, can reference @val's it of course doesnt have (yet)
