@@ -152,3 +152,8 @@ about_open_classes
 defining a class a second time does not replace but instead extends
 test_dice_values_should_change_between_rolls: either a test of the pRNG seed, pRNG in general or object reuse
   object reuse is the easiest and quickest to test, seed is cheap, pRNG in general is incredibly expensive though reduce likelyhood is possible
+
+about_inheritence
+.super refers to parent method not class ie cant use to call a different method
+method(:foo).super_method.call is possible however
+which is dumb

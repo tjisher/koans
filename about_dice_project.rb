@@ -57,7 +57,7 @@ class AboutDiceProject < Neo::Koan
     dice.roll(5)
     first_time = dice.values
     dice2.roll(5)
-    second_time = dice.values
+    second_time = dice2.values
 
     assert_not_equal first_time, second_time,
       "First rolls of new Dice should not be equal"
